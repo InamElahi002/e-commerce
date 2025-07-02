@@ -1,0 +1,221 @@
+.hero {
+    height: 95vh;
+
+    background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
+    display: flex;
+}
+
+.hero-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    /* padding-left: 180px; */
+    padding-left: 108px;
+    line-height: 1.1;
+
+}
+
+.hero-left h2 {
+    color: #090909;
+    font-size: 26px;
+    font-weight: 600;
+
+}
+
+.hero-left p {
+    color: #090909;
+    font-size: 100px;
+    font-weight: 700;
+}
+
+.hand-hand-icon {
+    display: flex;
+
+    align-items: center;
+    gap: 20px;
+
+}
+
+.hand-hand-icon img {
+    width: 105px;
+}
+
+.hero-latest-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 310px;
+    height: 70px;
+    border-radius: 75px;
+    background-color: red;
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+
+}
+
+.hero-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.hero-girl{
+    height: 100vh;
+}
+
+
+
+
+
+
+
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Apply Animations */
+.hero {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.hero-left {
+  animation: slideInLeft 1s ease;
+}
+
+.hero-right {
+  animation: slideInRight 1s ease;
+}
+
+
+@media (max-width: 1280px) {
+  .hero-left {
+    padding-left: 60px;
+  }
+
+  .hero-left p {
+    font-size: 80px;
+  }
+
+  .hand-hand-icon img {
+    width: 80px;
+  }
+
+  .hero-latest-btn {
+    width: 260px;
+    height: 60px;
+    font-size: 20px;
+  }
+
+  .hero-girl {
+    height: 90vh;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-left {
+    padding-left: 40px;
+  }
+
+  .hero-left p {
+    font-size: 60px;
+  }
+
+  .hero-left h2 {
+    font-size: 22px;
+  }
+
+  .hand-hand-icon img {
+    width: 60px;
+  }
+
+  .hero-latest-btn {
+    width: 220px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .hero-girl {
+    height: 80vh;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero {
+    flex-direction: column; /* yeh line change ki gayi hai */
+    align-items: center;
+    height: auto;
+    padding: 40px 0;
+    gap: 30px;
+  }
+
+  .hero-left {
+    padding: 0 20px;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+  }
+
+  .hero-girl {
+    width: 65%;
+    height: auto;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .hero-left p {
+    font-size: 36px;
+  }
+
+  .hero-left h2 {
+    font-size: 18px;
+  }
+
+  .hand-hand-icon img {
+    width: 40px;
+  }
+
+  .hero-latest-btn {
+    width: 180px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .hero-girl {
+    width: 80%;
+  }
+}

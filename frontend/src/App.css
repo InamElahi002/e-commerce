@@ -1,0 +1,758 @@
+.App {
+  text-align: center;
+}
+
+body {
+  zoom: 0.8;
+}
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+/* App.css */
+
+/* Navbar dark mode fix */
+body.dark-mode .navbar {
+  background-color: #1f1f1f;
+  color: white;
+}
+
+
+
+
+
+body.dark-mode .nav-logo p {
+  color: #ffcc00;
+}
+
+
+
+
+
+
+
+body.dark-mode .nav-login-cart button {
+  background-color: #333;
+  color: white;
+  border: 1px solid #555;
+}
+
+body.dark-mode .nav-login-cart .auth-button {
+  background-color: blue;
+  color: #fff;
+}
+
+body.dark-mode .nav-menu hr {
+  border-color: white;
+
+}
+
+
+
+body.dark-mode .productdisplay-right h1,
+body.dark-mode .productdisplay-right p,
+body.dark-mode .productdisplay-right div,
+body.dark-mode .productdisplay-right span {
+  color: white !important;
+}
+
+body.dark-mode .productdisplay-right-sizes div {
+  color: black !important;
+}
+
+body.dark-mode .productdisplay-right .productdisplay-right-prices-old {
+  color: #999 !important;
+  /* for strikethrough old price */
+}
+
+.body.dark-mode .productdisplay-right-sizes {
+  color: #222;
+}
+
+body:not(.dark-mode) .productdisplay-right h1 {
+  color: #222;
+}
+
+
+/* body.dark-mode .nav-dropdown {
+  content: url('../Assets/nav_dropdown_dark.png');
+} */
+ 
+body.dark-mode .nav-dropdown {
+  background-color: #333;
+  border-radius: 6px;
+  padding: 5px;
+}
+
+body.dark-mode .nav-dropdown:hover {
+  background-color: #444;
+}
+
+/* DARK MODE - nav-dropdown button styles */
+/* body.dark-mode .nav-dropdown {
+  /* filter: invert(1); */
+  /* background-color: #333; */
+/* }  */
+
+
+/* Dropdown menu in dark mode */
+body.dark-mode .nav-menu {
+  background-color: #121212;
+  color: white;
+}
+
+body.dark-mode .nav-menu li a {
+  color: white !important;
+}
+
+body.dark-mode .nav-menu hr {
+  background: #ffcc00;
+  /* Optional: change highlight underline color in dark mode */
+}
+
+
+body.dark-mode .nav-menu li:hover {
+  background-color: #1e1e1e;
+}
+
+
+/* On dark mode, for example */
+body.dark-mode .cart-icon {
+  filter: invert(90%) sepia(20%) saturate(700%) hue-rotate(150deg) brightness(110%) contrast(90%);
+}
+
+
+
+
+
+
+
+
+/* Dark mode container */
+.dark-mode .cartitems {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-mode .cartitems-format-main p,
+.dark-mode .cartitems-format p,
+.dark-mode .cartitems-total p,
+.dark-mode .cartitems-total h1,
+.dark-mode .cartitems-total h3,
+.dark-mode .cartitems-promocode p {
+  color: #e0e0e0;
+}
+
+.dark-mode .cartitems-product-icon {
+  filter: brightness(0.8);
+}
+
+.dark-mode .cartitems-remove-icon {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+.dark-mode hr {
+  border-color: #444;
+}
+
+.dark-mode .cartitems-quantity {
+  background-color: #333;
+  color: #fff;
+  border: none;
+}
+
+.dark-mode .cartitems-total {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.dark-mode .cartitems-total-items {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  color: #ddd;
+}
+
+.dark-mode .cartitems-total-items p {
+  color: #ddd;
+}
+
+.dark-mode .cartitems-total-items h3 {
+  color: #fff;
+}
+
+
+
+/* 🌙 Dark mode   for login singup styles */
+body.dark-mode .loginsignup {
+  background-color: #121212;
+}
+
+body.dark-mode .loginsigup-container {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .loginup-fields input {
+  background-color: #2a2a2a;
+  color: white;
+  border: 1px solid #444;
+}
+
+body.dark-mode .loginup-fields input::placeholder {
+  color: #bbb;
+}
+
+body.dark-mode button {
+  background-color: red;
+  color: #fff;
+}
+
+body.dark-mode .loginsigup-login span {
+  color: #8ab4f8;
+}
+
+body.dark-mode .loginsigup-agree p {
+  color: #ccc;
+}
+
+
+/* OrderSuccess css for */
+
+/* Light theme (default) */
+.order-success-container {
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.circle-loader {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #ccc;
+  border-top-color: #333;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.status-text {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  text-align: center;
+  max-width: 300px;
+}
+
+/* Dark mode styles */
+body.dark-mode .order-success-container {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark-mode .circle-loader {
+  border-color: #444;
+  border-top-color: #8ab4f8;
+}
+
+body.dark-mode .status-text {
+  color: #ddd;
+}
+
+/* Spinner animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* DARK MODE for placeorder STYLES */
+body.dark-mode .place-order {
+  background-color: #121212;
+  color: #eee;
+}
+
+body.dark-mode .place-order-left input {
+  background-color: #1e1e1e;
+  border: 1px solid #555;
+  color: #eee;
+}
+
+body.dark-mode .place-order-right {
+  background-color: #1f1f1f;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .cart-total-details hr {
+  border-top: 1px solid #444;
+}
+
+
+/* 🌙 DARK MODE STYLES */
+body.dark-mode .my-orders-container {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode .my-orders-1 {
+  color: #ffffff;
+}
+
+body.dark-mode .order {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .order-content {
+  color: #ddd;
+}
+
+body.dark-mode .order-content p {
+  color: #ccc;
+}
+
+body.dark-mode .order-content ul li {
+  color: #eee;
+}
+
+body.dark-mode .no-order {
+  color: #aaa;
+}
+
+
+body.dark-mode button:hover {
+  background-color: green;
+}
+
+
+/* Highlight for order statuses in dark mode */
+body.dark-mode .order-content p[data-status="Pending"] {
+  color: orange;
+  font-weight: bolder;
+}
+
+body.dark-mode .order-content p[data-status="Processing"] {
+  color: gold;
+  font-weight: bolder;
+}
+
+body.dark-mode .order-content p[data-status="Out for Delivery"] {
+  color: lightblue;
+  font-weight: bolder;
+}
+
+body.dark-mode .order-content p[data-status="Delivered"] {
+  color: lightgreen;
+  font-weight: bolder;
+}
+
+.order-content p {
+  transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+
+
+
+
+
+/* Dark Mode Styles for Hero Component */
+body.dark-mode .hero {
+  background-color: #111;
+  /* background-color: #1e1e1e; */
+
+  color: #f5f5f5;
+}
+
+body.dark-mode .hero-left h2 {
+  /* color: #ffcc00; */
+  color: #f5f5f5;
+
+
+}
+
+body.dark-mode .hero-left p {
+  color: #e0e0e0;
+}
+
+body.dark-mode .hero-latest-btn {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+body.dark-mode .hero-latest-btn:hover {
+  background-color: #333;
+}
+
+body.dark-mode .hand-hand-icon img,
+body.dark-mode .hero-right img {
+  filter: brightness(0.8) contrast(1.1);
+
+}
+
+
+
+
+/* Dark Mode Styles for Popular Component */
+body.dark-mode .popular {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .popular h1 {
+  color: #ffcc00;
+}
+
+body.dark-mode .popular hr {
+  border-color: #444;
+}
+
+body.dark-mode .popular-item {
+  /* If your items have a background or border, adjust here */
+  background-color: transparent;
+}
+
+/* Optional: If Item component uses cards or boxes */
+body.dark-mode .popular-item>* {
+  background-color: #1e1e1e;
+  color: #ddd;
+  border: 1px solid #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .popular-item>*:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+
+
+/* Dark Mode Styles for Offers Component */
+body.dark-mode .offers {
+  background-color: #121212;
+  color: #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+body.dark-mode .offers-left h1 {
+  /* color: #ffcc00; */
+  color: #f5f5f5;
+
+  /* warm gold tone for headings */
+  margin: 0;
+}
+
+body.dark-mode .offers-left p {
+  color: #bbb;
+  margin: 10px 0 20px;
+}
+
+body.dark-mode .offers-left button {
+  background-color: #ffcc00;
+  color: #121212;
+  border: none;
+  padding: 12px 24px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode .offers-left button:hover {
+  background-color: #e6b800;
+}
+
+body.dark-mode .offers-right img {
+  filter: brightness(0.8);
+  /* Slightly dim the image in dark mode */
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+
+/* Dark Mode for NewCollections */
+body.dark-mode .newcollections {
+
+  background-color: #121212;
+  color: #e0e0e0;
+  padding: 20px;
+
+}
+
+body.dark-mode .newcollections h1 {
+  color: #ffcc00;
+
+  /* gold accent for heading */
+  margin-bottom: 20px;
+}
+
+/* 
+body.dark-mode .newcollections .collections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+} */
+
+
+
+
+
+/* If you want to style the Item component containers specifically */
+body.dark-mode .newcollections .collections>div {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  /* padding: 15px; */
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+body.dark-mode .newcollections .collections>div:hover {
+  box-shadow: 0 0 15px rgba(255, 204, 0, 0.5);
+}
+
+
+
+
+/* Dark Mode for Newsletter Section */
+body.dark-mode .newletter {
+  /* background: linear-gradient(180deg, #2a2a2a, #1f1f1f 60%);
+     */
+  background-color: #181818;
+
+  color: #ddd;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Heading in Dark Mode */
+body.dark-mode .newletter h1 {
+  color: #f5f5f5;
+
+  /* color: #ffd700; */
+
+}
+
+/* Paragraph in Dark Mode */
+body.dark-mode .newletter p {
+  color: #bbb;
+}
+
+/* Newsletter Input Container */
+body.dark-mode .newletter div {
+  background: #2e2e2e;
+  border: 1px solid #555;
+}
+
+/* Input Field in Dark Mode */
+body.dark-mode .newletter input {
+  background: transparent;
+  color: #eee;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+}
+
+body.dark-mode .newletter input::placeholder {
+  color: #888;
+}
+
+/* Button in Dark Mode */
+body.dark-mode .newletter div button {
+  background: #ffd700;
+  color: #222;
+  border-radius: 100px;
+  /* Match your light mode setting */
+  transition: background 0.3s ease;
+}
+
+body.dark-mode .newletter div button:hover {
+  background: #e6c200;
+}
+
+/* Responsive Adjustments (optional but helpful) */
+@media (max-width: 768px) {
+  body.dark-mode .newletter div button {
+    width: 100%;
+    margin-right: 20px;
+  }
+
+  body.dark-mode .newletter input {
+    width: 100%;
+  }
+}
+
+
+/* Dark mode for Footer */
+/* Dark mode colors only — no layout changes */
+body.dark-mode .footer {
+  background-color: #121212;
+  /* dark background */
+  color: #ccc;
+  /* lighter text */
+  border-top: 1px solid #333;
+}
+
+body.dark-mode .footer-logo p {
+  color: #ffd700;
+  /* gold text */
+}
+
+body.dark-mode .footer-links li {
+  color: #bbb;
+}
+
+body.dark-mode .footer-links li:hover {
+  color: #ffd700;
+}
+
+body.dark-mode .footer-icons-container {
+  background-color: #222;
+}
+
+body.dark-mode .footer-icons-container:hover {
+  background-color: #ffd700;
+}
+
+body.dark-mode .footer-icons-container img {
+  filter: brightness(0) invert(1);
+}
+
+body.dark-mode .footer-copyright {
+  color: #777;
+  border-color: #333;
+}
+
+
+/* Dark mode container */
+body.dark-mode .shop-category {
+  background-color: #121212;
+  color: #ddd;
+}
+
+/* Banner image with subtle dark overlay */
+body.dark-mode .shopcategory-banner {
+  filter: brightness(0.8);
+}
+
+/* Text in indexSort section */
+body.dark-mode .shopcategory-indexSort p,
+body.dark-mode .shopcategory-indexSort span {
+  color: #ccc;
+}
+
+/* Sort by dropdown */
+body.dark-mode .shopcategory-sort {
+  color: #eee;
+  cursor: pointer;
+}
+
+/* Dropdown icon tint for dark */
+body.dark-mode .shopcategory-sort img {
+  filter: invert(1) brightness(1.2);
+}
+
+/* Product container */
+body.dark-mode .shopcategory-products {
+  background-color: #181818;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+/* Load More button */
+body.dark-mode .shopcategory-loadmore {
+  margin-top: 1rem;
+  background-color: #333;
+  color: #fff;
+  padding: 12px 24px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  border-radius: 20px;
+}
+
+body.dark-mode .shopcategory-loadmore:hover {
+  background-color: #555;
+}
+
+
+/* Dark mode for Related Products section */
+body.dark-mode .relatedproducts {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+body.dark-mode .relatedproducts h1 {
+  /* color: #ffffff; */
+  color: #ffd700;
+}
+
+body.dark-mode .relatedproducts .item {
+  background-color: #2c2c2c;
+  border: 1px solid #444;
+}
+
+body.dark-mode .relatedproducts-item .item:hover {
+  background-color: #3a3a3a;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .relatedproducts-item .item img {
+  filter: brightness(0.9);
+}
+
+body.dark-mode .related-products-item .item-details {
+  color: #e0e0e0;
+}
+
+body.dark-mode .related-products-item .item-price {
+  color: #ffd700;
+  /* Gold price */
+}

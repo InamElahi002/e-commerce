@@ -1,0 +1,340 @@
+.admin {
+  display: flex
+}
+
+
+
+/* Light mode (default) */
+body {
+  background-color: #fff;
+  color: #000;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode styles applied via .dark-mode class on body */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+/* Component-specific overrides */
+body.dark-mode .admin-order,
+body.dark-mode .listproduct,
+body.dark-mode .addproduct {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+  border-color: #333;
+}
+
+body.dark-mode select,
+body.dark-mode input,
+body.dark-mode textarea {
+  background-color: #2c2c2c;
+  color: white;
+  border: 1px solid #555;
+}
+
+body.dark-mode button {
+  background-color: #c62828;
+  color: white;
+}
+
+body.dark-mode hr {
+  border-color: #333;
+}
+
+
+
+/* Dark mode for navbar  styles */
+body.dark-mode .navbar {
+  background-color: #121212;
+  /* Dark background */
+  box-shadow: 0 1px 3px -2px #000;
+  /* keep shadow */
+}
+
+body.dark-mode .navbar,
+body.dark-mode .navbar * {
+  color: white;
+}
+
+
+/* Specific text colors */
+body.dark-mode .navbar h1 {
+  color: yellow;
+}
+
+/* Button styling (assuming you have buttons inside navbar, else add selector) */
+body.dark-mode .navbar button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 0px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+
+
+
+/* Dark mode for sidebar */
+body.dark-mode .sidebar {
+  background-color: #121212;
+  /* dark background */
+  color: yellow;
+  /* default text yellow */
+}
+
+/* Sidebar items background and text */
+body.dark-mode .sidebar-item {
+  background-color: #222;
+  /* darker gray background */
+  color: white;
+  /* white text inside items */
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for sidebar items */
+body.dark-mode .sidebar-item:hover {
+  background-color: red;
+  /* red background on hover */
+  color: white;
+  /* text stays white */
+}
+
+/* Optional: if sidebar-item has buttons or clickable elements inside */
+body.dark-mode .sidebar-item button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode .sidebar-item button:hover {
+  background-color: green;
+}
+
+/* Maintain responsiveness and structure */
+@media (max-width: 480px) {
+  body.dark-mode .sidebar {
+    background-color: #121212;
+    /* keep dark bg on mobile */
+  }
+
+  body.dark-mode .sidebar-item {
+    background-color: #222;
+  }
+
+  body.dark-mode .sidebar-item:hover {
+    background-color: red;
+  }
+}
+
+
+
+
+/* dark-mode css for Addproduct  */
+
+body.dark-mode .add-product {
+  background-color: #121212;
+  color: yellow;
+}
+
+body.dark-mode .addproduct-itemfield>p {
+  color: yellow;
+}
+
+body.dark-mode .addproduct-itemfield input,
+body.dark-mode .add-product-selector {
+  color: white;
+  background-color: #222;
+  border: 1px solid #444;
+  font-size: 14px;
+}
+
+body.dark-mode .addproduct-itemfield input::placeholder,
+body.dark-mode .add-product-selector::placeholder {
+  color: #ccc;
+}
+
+body.dark-mode .addproduct-thumnail-img {
+  background-color: #333;
+  border-radius: 10px;
+}
+
+body.dark-mode .addproduct-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode .addproduct-btn:hover {
+  background-color: green;
+}
+
+/* Responsive dark mode */
+/* @media (max-width: 768px) {
+  body.dark-mode .add-product {
+    padding: 20px 30px;
+
+    margin: 20px 15px;
+  }
+
+  body.dark-mode .addproduct-price {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  body.dark-mode .add-product-selector {
+    width: 100%;
+  }
+
+  body.dark-mode .addproduct-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  body.dark-mode .add-product {
+    padding: 15px 20px;
+    margin: 10px;
+  }
+
+  body.dark-mode .addproduct-itemfield input,
+  body.dark-mode .add-product-selector {
+    height: 45px;
+    font-size: 13px;
+  }
+
+  body.dark-mode .addproduct-thumnail-img {
+    height: 100px;
+    width: 100px;
+  }
+
+  body.dark-mode .addproduct-btn {
+    width: 100%;
+    height: 45px;
+    font-size: 14px;
+  }
+} */
+
+
+
+
+
+/* Dark Mode Styles for ListProduct */
+
+.dark-mode {
+  background-color: #1e1e1e;
+
+  color: #f0f0f0;
+}
+
+.dark-mode .listproduct {
+  background: #2a2a2a;
+
+
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode .listproduct-format-main {
+  /* color: #f0f0f0; */
+  color: yellow;
+
+  border-color: #444;
+}
+
+.dark-mode .listproduct-format {
+  border-bottom: 1px solid #333;
+}
+
+.dark-mode .listproduct-remove-icon {
+  filter: brightness(0) invert(1);
+}
+
+
+.dark-mode .listproduct-format {
+  color: #f0f0f0;
+
+  border-color: #444;
+}
+
+.dark-mode .listproduct-format {
+  border-bottom: 1px solid #333;
+}
+
+.dark-mode .listproduct-remove-icon {
+  filter: brightness(0) invert(1);
+}
+
+@media (max-width: 480px) {
+
+
+  .dark-mode .listproduct-format {
+    background-color: #333;
+    border: 1px solid #555;
+  }
+}
+
+
+
+
+
+/* dark-mode css for OrderProduct */
+.dark-mode .admin-orders-container {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+.dark-mode .admin-order-details {
+  color: #ccc;
+}
+
+.dark-mode .admin-order-items ul {
+  color: #ddd;
+}
+
+.dark-mode .admin-order-status select {
+  background-color: #ffe5e5;
+  ;
+  color: #333;
+  border: 1px solid #888;
+}
+
+.dark-mode .admin-order-status button {
+  background-color: #d32f2f;
+}
+
+.dark-mode .admin-order-status button:hover {
+  background-color: green;
+}
+
+.dark-mode .admin-order img {
+  filter: brightness(0.9);
+}
+
+.dark-mode .no-order {
+  color: #aaa;
+}
+
+.dark-mode .admin-order {
+  background-color: #2c2c2c;
+  color: #f0f0f0;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 12px;
+  transition: box-shadow 0.3s ease;
+  /* Smooth hover effect */
+}
+
+.dark-mode .admin-order:hover {
+  box-shadow: 0 0 10px 2px rgba(255, 255, 0, 0.6);
+  /* Yellow glow on hover */
+}

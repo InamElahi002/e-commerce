@@ -1,0 +1,145 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 60px;
+  box-shadow: 0 1px 3px -2px#000;
+  background: white;
+  margin-bottom: 1px;
+
+}
+
+
+.nav-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-logo p {
+  color: #171717;
+  font-size: 38px;
+  font-weight: 600;
+}
+
+.nav-profile {
+  width: 75px;
+}
+
+.mode-toggle-btn {
+  /* position: fixed; */
+  position: absolute;
+  top: 25px;
+  right: 180px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.icon {
+  margin-top: 10px;
+  width: 80px;
+  height: 40px;
+}
+
+.navbar h1 {
+  display: none;
+}
+
+/* Default light mode */
+.shopper {
+  color: #171717;
+  font-size: 38px;
+  font-weight: 600;
+}
+
+.admin-panel {
+  color: red;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+
+/* ===== Responsive Styles for Smaller Screens ===== */
+@media (max-width: 768px) {
+  .nav-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .nav-title {
+    align-items: flex-start;
+  }
+
+  .shopper {
+    font-size: 18px;
+  }
+
+  .admin-panel {
+    font-size: 12px;
+  }
+
+  .nav-logo {
+    width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-left {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .shopper {
+    font-size: 16px;
+  }
+
+  .admin-panel {
+    font-size: 11px;
+  }
+
+  .nav-logo {
+    width: 100px;
+  }
+
+  .icon {
+    margin-right: -20px;
+    margin-top: 4px;
+    width: 55px;
+    height: 25px;
+  }
+
+}
+@media (max-width: 420px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    gap: 10px;
+  }
+
+  .nav-logo {
+    width: 55px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .icon {
+    width: 50px;
+    height: 30px;
+    margin: 0;
+  }
+
+  .nav-profile {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+  }
+
+  .mode-toggle-btn {
+    position: static; /* remove absolute so it stays in row */
+  }
+}

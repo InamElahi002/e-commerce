@@ -1,0 +1,428 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+} */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  box-shadow: 0 1px 3px -2px black;
+  gap: 187px;
+  align-items: center;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-logo p {
+  color: #171717;
+  font-size: 38px;
+  font-weight: 600;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 50px;
+  color: #626262;
+  font-size: 20px;
+  font-weight: 500;
+  flex: 1;
+}
+
+.nav-menu li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  cursor: pointer;
+}
+
+.nav-menu hr {
+  border: none;
+  width: 80%;
+  height: 3px;
+  border-radius: 10px;
+  background: #FF4141;
+}
+
+.nav-login-cart {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
+.buttons{
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  box-shadow: 0 1px 3px -2px black;
+  gap: 187px;
+  align-items: center;
+}
+
+
+
+.auth-button {
+  background-color: blue;
+  color: white;
+  padding: 16px 38px;
+  border: none;
+  border-radius: 22px;
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: large;
+}
+
+.auth-button.logged-in {
+  background-color: red;
+}
+
+
+.nav-login-cart button:active {
+  background: #f3f3f3;
+}
+
+.nav-cart-count {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -35px;
+  margin-left: -55px;
+  border-radius: 11px;
+  font-size: 14px;
+  background: red;
+  color: white;
+}
+
+.nav-dropdown {
+  display: none;
+}
+
+
+/* Light mode styles (default) */
+body {
+  background-color: #fff;
+  color: #000;
+}
+
+.navbar {
+  background-color: #f8f8f8;
+}
+
+
+
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode .navbar {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .auth-button {
+  background-color: #333;
+  color: white;
+}
+
+body.dark-mode .auth-button.logged-in {
+  background-color: #b30000;
+}
+
+.theme-toggle {
+  margin-left: 10px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #ddd;
+  border: none;
+}
+
+
+
+body.dark-mode .navbar {
+  background-color: #1f1f1f;
+  color: white;
+}
+
+.mode-toggle-btn .icon {
+  width: 67px;
+  height: 31px;
+  vertical-align: middle;
+  border-radius: 34px;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+/* By default show light icon, hide dark icon */
+.mode-toggle-btn .dark-icon {
+  display: none;
+}
+
+/* When dark mode active: hide light icon, show dark icon */
+body.dark-mode .mode-toggle-btn .light-icon {
+  display: none;
+}
+
+body.dark-mode .mode-toggle-btn .dark-icon {
+  display: inline;
+}
+
+
+
+
+
+
+
+
+
+
+@media(max-width:1280) {
+  .navbar {
+    padding: 12px 50px;
+
+
+  }
+
+  .nav-logo img {
+    width: 488px;
+  }
+
+  .nav-logo p {
+    font-size: 25px;
+  }
+
+  .nav-menu {
+    gap: 38px;
+  }
+
+  .nav-menu-card {
+    gap: 30px;
+  }
+
+  .nav-login-cart button {
+    width: 120px;
+    height: 45px;
+    font-size: 16px;
+  }
+
+  .nav-cart-count {
+    margin-left: -40px;
+    font-size: 12px;
+  }
+  .nav-login-cart {
+   
+    margin-left: 140px; /* ✅ Adjusted here */
+  }
+
+
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 10px 0;
+  }
+
+  .nav-menu {
+    gap: 25px;
+    font-size: 14px;
+  }
+
+  .nav-login-cart {
+    width: 80px;
+    height: 35px;
+    font-size: 14px;
+    margin-right: 20px; /* ✅ Adjusted here */
+  }
+
+  .nav-login-cart img {
+    width: 30px;
+  }
+
+  .nav-cart-count {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .navbar {
+    padding: 0px 30px;
+  }
+
+  .nav-dropdown {
+    display: block;
+    width: 30px;
+    rotate: -90deg;
+    transition: 0.5s;
+  }
+
+  .nav-menu {
+    display: none;
+    height: 80px;
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    justify-content: center;
+    top: 50px;
+  }
+
+  .nav-menu-visible {
+    display: flex;
+  }
+
+  .nav-dropdown.open {
+    transform: rotate(90deg);
+  }
+
+  .nav-login-cart {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-right: 10px; /* ✅ Adjusted here */
+  }
+}
+
+
+
+
+@media (max-width: 500px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 10px;
+    flex-wrap: wrap;
+            margin-left: -24px;
+  }
+
+  .nav-logo {
+    flex: 1;
+    transform: scale(0.85);
+  }
+
+ 
+
+  .nav-login-cart {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: nowrap;
+          margin-right: 80px;
+
+  }
+
+  .nav-login-cart button {
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 6px;
+  }
+
+  .nav-login-cart img {
+    width: 24px;
+  }
+
+  .nav-cart-count {
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+    margin-left: -20px;
+    margin-top: -20px;
+  }
+
+
+
+  .mode-toggle-btn .icon {
+    width: 28px;
+    height: 16px;
+  }
+}
+@media (max-width: 380px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 8px;
+    gap: 4px;
+    flex-wrap: nowrap;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transform: scale(0.6);
+  }
+
+  .nav-logo img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .nav-logo p {
+    font-size: 18px;
+  }
+
+  .nav-dropdown {
+    width: 18px;
+    height: 18px;
+  }
+
+  .nav-login-cart {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .auth-button {
+    padding: 4px 6px;
+    font-size: 10px;
+    border-radius: 6px;
+  }
+
+  .mode-toggle-btn .icon {
+    width: 22px;
+    height: 12px;
+    border-width: 1px;
+  }
+
+  .nav-login-cart img.cart-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .nav-cart-count {
+    width: 14px;
+    height: 14px;
+    font-size: 9px;
+    margin-left: -14px;
+    margin-top: -14px;
+  }
+}

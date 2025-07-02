@@ -1,0 +1,213 @@
+
+.order {
+    flex-wrap: wrap;
+    gap: 16px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1300px;
+    margin: 20px auto;
+    margin-bottom: 20px auto;
+
+    padding: 16px;
+    background-color: #fafafa;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.my-orders-1{
+    display: flex
+;
+    margin-bottom: 20px auto;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+    margin: 10px 1070px 0px 0px;
+    font-size: xxx-large;
+    font-weight: bold;
+
+}
+
+.order img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.order-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    flex: 1;
+    
+}
+
+.order-content p,
+.order-content ul {
+    margin: 0;
+    color: #444;
+    font-size: 16px;
+
+    
+}
+
+.order ul {
+    list-style-type: disc;
+    padding-left: 16px;
+}
+
+.order ul li {
+    margin: 2px 0;
+    
+}
+
+.order button {
+    border: none;
+    padding: 28px 46px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #ffe1e1;
+    color: #454545;
+    flex-shrink: 0;
+}
+.order {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.order:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
+}
+
+
+
+
+.order-content p:has(strong:contains("Status:")) {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.order-content p:has(strong:contains("Status:"))::after {
+  content: attr(data-status);
+  font-weight: bold;
+  color: orange;
+  position: relative;
+  padding-left: 12px;
+}
+
+.order-content p[data-status="Pending"]::before {
+  content: '•';
+  color: orange;
+  font-size: 18px;
+  margin-right: 4px;
+  font-weight: bold;
+}
+.order-content p[data-status="Processing"]::before {
+  content: '•';
+  color: yellow;
+  font-size: 18px;
+  margin-right: 4px;
+  font-weight: bold;
+}
+.order-content p[data-status="Out for Delivery"]::before {
+  content: '•';
+  color: skyblue;
+  font-size: 10px;
+  margin-right: 4px;
+  font-weight: bold;
+}
+.order-content p[data-status="Delivered"]::before {
+  content: '•';
+  color:palegreen;
+  font-size: 18px;
+  margin-right: 4px;
+  font-weight: bold;
+}
+
+
+.no-order{
+    
+    font-size:50px;
+    font-weight: bold;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+  .my-orders-container {
+    padding: 10px;
+  }
+
+  .my-orders-1 {
+    margin: 10px auto;
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .order {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .order-content {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .order-content p,
+  .order-content ul {
+    font-size: 15px;
+  }
+
+  .order button {
+    padding: 12px 24px;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .order img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* For phones and smaller devices */
+@media (max-width: 480px) {
+  .my-orders-1 {
+    font-size: 24px;
+    margin: 8px auto;
+  }
+
+  .order-content p,
+  .order-content ul {
+    font-size: 14px;
+  }
+
+  .order-content ul {
+    padding-left: 12px;
+  }
+
+  .order-content li {
+    font-size: 14px;
+  }
+
+  .order button {
+    font-size: 13px;
+    padding: 10px 20px;
+  }
+
+  .no-order {
+    font-size: 32px;
+    text-align: center;
+    margin: 20px 0;
+  }
+}

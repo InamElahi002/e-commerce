@@ -1,0 +1,156 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo p {
+    color: #383838;
+    font-size: 46px;
+    font-weight: 700;
+
+}
+
+.footer-links {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    color: #252525;
+    font-size: 20px;
+}
+
+.footer-links li {
+    cursor: pointer;
+}
+
+.footer-social-icon {
+    display: flex;
+    gap: 20px;
+
+}
+
+.footer-social-container {
+    padding: 10px;
+    padding-bottom: 6px;
+    background: #fbfbfb;
+    border: 1px solid #ebebeb;
+}
+
+.footer-icons-container {
+    padding: 10px;
+    padding-bottom: 6px;
+    background: #fbfbfb;
+    border: 1px solid #ebebeb;
+    cursor: pointer;
+}
+
+
+.footer-copyrigt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    margin-bottom: 30px;
+    color: black;
+    font-size: 20px;
+
+}
+
+.footer-copyright hr {
+    width: 80%;
+    border: none;
+    border-radius: 10px;
+    height: 3px;
+    color: #ebebeb;
+}
+
+
+@media (max-width: 1024px) {
+    .footer-links {
+        gap: 30px;
+        font-size: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-logo p {
+        font-size: 36px;
+    }
+
+    .footer-social-icon {
+        gap: 16px;
+    }
+
+    .footer-copyrigt {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        gap: 40px;
+        padding: 20px;
+    }
+
+    .footer-logo {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+    }
+
+    .footer-social-icon {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .footer-copyrigt {
+        font-size: 16px;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-logo img {
+        width: 80px;
+        height: auto;
+    }
+
+    .footer-logo p {
+        font-size: 28px;
+    }
+
+    .footer-links {
+        font-size: 16px;
+    }
+
+    .footer-social-icon img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .footer-copyrigt {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .footer-copyright hr {
+        width: 90%;
+        height: 2px;
+    }
+}

@@ -1,0 +1,75 @@
+/* Your existing CSS (unchanged) */
+.newcollections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    height: 90vh;
+}
+
+.newcollections h1 {
+    color: #171717;
+    font-size: 50px;
+    font-weight: 600;
+    margin: 24px;
+}
+
+.newcollections hr {
+    width: 200px;
+    height: 6px;
+    border-radius: 10px;
+    background: #252525;
+}
+
+.collections {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 50px;
+    gap: 20px;
+
+    /* Animation */
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+    animation-delay: 0.2s;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+    .collections {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .newcollections h1 {
+        font-size: 36px;
+        margin: 16px;
+    }
+    .collections {
+        grid-template-columns: 1fr 1fr;
+        margin-top: 30px;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+   .newcollections {
+        height: auto;
+    }
+    .newcollections h1 {
+        font-size: 28px;
+        margin: 12px;
+    }
+    .collections {
+        grid-template-columns: 1fr 1fr;
+        margin-top: 20px;
+        gap: 10px;
+    }
+}

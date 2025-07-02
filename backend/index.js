@@ -462,14 +462,6 @@ app.put("/api/admin/updateorder/:orderId", async (req, res) => {
     }
 });
 
-
-
-//api for check section in stripe
-// const stripe = require('stripe')('sk_test_51RSxs4I5c2bVmMJGW0CpHDqyBNm1ivdNHvdLYbOeSM3sf3mZDtZzQsIEo8OT31lo7kJqdLvZTweDaqIB1Hqudwg900TIMnig2E'); 
-// 
-// 
-// Use env var in production
-
 app.post('/api/create-checkout-session', async (req, res) => {
     const { cartItems, deliveryInfo, totalAmount } = req.body;
 
